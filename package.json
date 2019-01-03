@@ -1,0 +1,43 @@
+{
+  "name": "nodejs_api",
+  "version": "1.0.0",
+  "description": "Nodejs RESTful API",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "concurrently --kill-others \"tsc -w\" \"nodemon dist/server.js\"",
+    "start": "nodemon ./dist/server.js",
+    "prod": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/BrunoCambianica/nodejs_api.git"
+  },
+  "keywords": [
+    "API",
+    "Nodejs",
+    "Typescript",
+    "RESTful"
+  ],
+  "author": "Bruno Cambianica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/BrunoCambianica/nodejs_api/issues"
+  },
+  "homepage": "https://gitlab.com/BrunoCambianica/nodejs_api#README",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "nodemon": "^1.18.5"
+  },
+  "dependencies": {
+    "@types/express": "^4.11.1",
+    "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
+    "express": "^4.16.3",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.0.14",
+    "nodemailer": "^4.6.8"
+  }
+}
